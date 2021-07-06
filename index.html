@@ -145,51 +145,10 @@
       <li>
         <code>webmanifest</code>
       </li>
+      <li>
+        Workbox
+      </li>
     </ul>
-  </section>
-
-  <section class="slide slide--bsa" id="webmanifest">
-    <h2 class="webmanifest__title">webmanifest</h2>
-    <div class="webmanifest__codes">
-      <pre class="webmanifest__code next">
-        <code><span class="comment">// manifest.webmanifest</span></code>
-        <code>{ </code>
-        <code>  "name": "GitHub", </code>
-        <code>  "short_name": "GH", </code>
-        <code>  "description:" "Internet hosting for software development & version control.", </code>
-        <code>  "start_url": ".", </code>
-        <code>  "display": "standalone", </code>
-        <code>  "orientation": "any", </code>
-        <code>  "background_color": "#000000", </code>
-        <code>  "theme_color": "#000000", </code>
-        <code>  "icons": [ </code>
-        <code>    { "src": "/img/icons/icon-512.png", "type": "image/png", "sizes": "512x512" }, </code>
-        <code>    { "src": "/img/icons/icon-192.png", "type": "image/png", "sizes": "192x192" } </code>
-        <code>  ] </code>
-        <code>} </code>
-        <code> </code>
-        <div class="next">
-          <code><span class="comment">&lt;!-- index.html --&gt;</span></code>
-          <code>&lt;head&gt;</code>
-          <code>  &lt;link rel="manifest" href="/manifest.webmanifest"&gt;</code>
-          <code>  &lt;link rel="icon" href="/img/icons/icon.svg" type="image/svg+xml"&gt;</code>
-          <code>  &lt;link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png"&gt;</code>
-          <code>&lt;/head&gt;</code>
-        </div>
-      </pre>
-    </div>
-
-    <style>
-      #webmanifest .webmanifest__title {
-        margin-bottom: 10px;
-      }
-
-      #webmanifest .webmanifest__codes {
-        display: flex;
-        font-size: 9px;
-        margin: 0 30px 0 0;
-      }
-    </style>
   </section>
 
   <section class="slide slide--bsa" id="roller-coaster">
@@ -298,6 +257,50 @@
         width: 50px;
         height: 50px;
         border-color: #02CC00;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="webmanifest">
+    <h2 class="webmanifest__title">webmanifest</h2>
+    <div class="webmanifest__codes">
+      <pre class="webmanifest__code next">
+        <code><span class="comment">// manifest.webmanifest</span></code>
+        <code>{ </code>
+        <code>  "name": "GitHub", </code>
+        <code>  "short_name": "GH", </code>
+        <code>  "description:" "Internet hosting for software development & version control.", </code>
+        <code>  "start_url": ".", </code>
+        <code>  "display": "standalone", </code>
+        <code>  "orientation": "any", </code>
+        <code>  "background_color": "#000000", </code>
+        <code>  "theme_color": "#000000", </code>
+        <code>  "icons": [ </code>
+        <code>    { "src": "/img/icons/icon-512.png", "type": "image/png", "sizes": "512x512" }, </code>
+        <code>    { "src": "/img/icons/icon-192.png", "type": "image/png", "sizes": "192x192" } </code>
+        <code>  ] </code>
+        <code>} </code>
+        <code> </code>
+        <div class="next">
+          <code><span class="comment">&lt;!-- index.html --&gt;</span></code>
+          <code>&lt;head&gt;</code>
+          <code>  &lt;link rel="manifest" href="/manifest.webmanifest"&gt;</code>
+          <code>  &lt;link rel="icon" href="/img/icons/icon.svg" type="image/svg+xml"&gt;</code>
+          <code>  &lt;link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png"&gt;</code>
+          <code>&lt;/head&gt;</code>
+        </div>
+      </pre>
+    </div>
+
+    <style>
+      #webmanifest .webmanifest__title {
+        margin-bottom: 10px;
+      }
+
+      #webmanifest .webmanifest__codes {
+        display: flex;
+        font-size: 9px;
+        margin: 0 30px 0 0;
       }
     </style>
   </section>
