@@ -294,18 +294,18 @@
 
   <section class="slide slide--bsa" id="sw-facts">
     <h2>Service Worker</h2>
-    <ul>
+    <ul class="next">
       <li>HTTPS only</li>
-      <li>New thread only (background mode)</li>
-      <li>No DOM</li>
-      <li>No sync API (XHR, LocalStorage, etc.)</li>
-      <li>Requests interception (caching, mutation requests)</li>
-      <li><s>this</s> self</li>
+      <li class="next">New thread only (background mode)</li>
+      <li class="next">No DOM</li>
+      <li class="next">No sync API (XHR, LocalStorage, etc.)</li>
+      <li class="next">Requests interception (caching, mutation requests)</li>
+      <li class="next"><s>this</s> self</li>
     </ul>
   </section>
 
   <section class="slide slide--bsa" id="sw-lifecycle">
-    <h2>Service Worker Life Cycle</h2>
+    <h2 class="sw-lifecycle__title">Service Worker Life Cycle</h2>
     <pre class="sw-lifecycle__code next">
       <code><span class="comment">// sw.js</span></code>
       <div class="next">
@@ -335,7 +335,45 @@
   </section>
 
   <section  class="slide slide--bsa" id="sw-example">
-    <h2>Service Worker Example</h2>
+    <h2 class="sw-example__title">Service Worker Example</h2>
+    <pre class="sw-example__code next">
+      <code><span class="comment">// sw.js</span></code>
+      <div class="next">
+        <code>const APP_CACHE_NAME = 'app-cache-v1';</code>
+        <code>const ASSETS_URLS = ['index.html', '/js/app.js', '/css/main.css'];</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('install', async () => {</code>
+        <code>  const cache = await caches.open(APP_CACHE_NAME);</code>
+        <code>  await cache.addAll(ASSETS_URLS);</code>
+        <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('fetch', async (evt) => {</code>
+        <code>  const cached = await caches.match(evt.request);</code>
+        <code>  evt.respondWith(cached ?? await fetch(evt.request));</code>
+        <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code><span class="comment">// js/main.js</span></code>
+        <code>window.addEventListener('load', () => { </code>
+        <code>  navigator.serviceWorker?.register('../sw.js'); </code>
+        <code>});</code>
+      </div>
+    </pre>
+
+    <style>
+      #sw-example .sw-example__title {
+        margin-bottom: 10px;
+      }
+
+      #sw-example .sw-example__code {
+        font-size: 10px;
+      }
+    </style>
   </section>
 
   <section class="slide slide--bsa" id="thanks">
