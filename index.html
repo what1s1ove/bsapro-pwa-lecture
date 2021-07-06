@@ -10,10 +10,6 @@
       --slide-ratio: calc(16 / 9);
     }
 
-    .slide::after {
-      display: none;
-    }
-
     .slide--bsa {
       background-image: url('./pictures/binary-studio-logo.svg'), url('./pictures/binary-studio-academy-logo.svg');
       background-repeat: no-repeat;
@@ -53,7 +49,15 @@
   <section class="slide slide--bsa" id="program">
     <h2>Today in the program</h2>
     <ul>
-      <li><code>webmanifest</code></li>
+      <li>
+        <b>P</b>rogressive <b>W</b>eb <b>A</b>pplication
+      </li>
+      <li>
+        <b>S</b>ervice <b>W</b>orker
+      </li>
+      <li>
+        <code>webmanifest</code>
+      </li>
     </ul>
   </section>
 
@@ -129,6 +133,29 @@
         </a>
       </li>
     </ul>
+  </section>
+
+  <section class="slide slide--bsa" id="who-listen">
+    <h2 class="who-listen__title">Who to listen to?</h2>
+    <p class="who-listen__desc next">🪄 Web-Standards 🦄</p>
+
+    <style>
+      #who-listen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #who-listen .who-listen__title {
+        align-self: center;
+      }
+
+      #who-listen .who-listen__desc {
+        align-self: center;
+        margin: 50px 0 0;
+        font-size: 60px;
+
+      }
+    </style>
   </section>
 
   <section class="slide slide--bsa" id="pwa-includes">
