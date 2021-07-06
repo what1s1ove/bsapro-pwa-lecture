@@ -16,6 +16,13 @@
       background-position: right 20px bottom 25px, left 20px bottom 15px;
       background-size: 75px, 50px;
     }
+
+    .slide--htmlacademy {
+      background-image: url('./pictures/htmlacademy-logo.svg');
+      background-repeat: no-repeat;
+      background-position: right 20px bottom 25px;
+      background-size: 30px;
+    }
   </style>
 </head>
 <body class="shower list">
@@ -42,6 +49,86 @@
 
       #cover .cover__title {
         font-weight: 400;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="who">
+    <h2>Who I am</h2>
+    <p class="position">
+      <a href="https://binary-studio.com/" target="_blank" rel="noreferrer">BinaryStudio </a>
+      ❤️ JavaScript Developer
+    </p>
+
+    <style>
+      #who {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #who h2 {
+        margin: 30px 0 0;
+        font-size: 50px;
+      }
+
+      #who .position {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0 0 0 50px;
+      }
+
+      #who .position::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 80%;
+        content: '';
+        background-color: #000000;
+      }
+
+      #who .position::after {
+        position: absolute;
+        bottom: 30px;
+        left: -7.5px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96.154px' height='96.154px' viewBox='0 0 96.154 96.154'%3E%3Cpath d='M0.561,20.971l45.951,57.605c0.76,0.951,2.367,0.951,3.127,0l45.956-57.609c0.547-0.689,0.709-1.716,0.414-2.61 c-0.061-0.187-0.129-0.33-0.186-0.437c-0.351-0.65-1.025-1.056-1.765-1.056H2.093c-0.736,0-1.414,0.405-1.762,1.056 c-0.059,0.109-0.127,0.253-0.184,0.426C-0.15,19.251,0.011,20.28,0.561,20.971z'/%3E%3C/svg%3E%0A");
+        background-size: cover;
+      }
+
+      #who .position a {
+        background-image: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--htmlacademy" id="htmlacademy">
+    <figure class="logo-wrapper">
+      <img src="pictures/htmlacademy-logo.svg" width="200" height="250" alt="Html academy logo">
+      <figcaption>
+        <a href="https://htmlacademy.ru/profile/whatislove" target="_blank" rel="noreferrer">HTMLAcademy</a>
+      </figcaption>
+    </figure>
+
+    <style>
+      #htmlacademy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #htmlacademy .logo-wrapper {
+        padding: 70px 0 0;
+      }
+
+      #htmlacademy figcaption {
+        text-align: center;
       }
     </style>
   </section>
