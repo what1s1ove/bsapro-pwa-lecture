@@ -16,6 +16,13 @@
       background-position: right 20px bottom 25px, left 20px bottom 15px;
       background-size: 75px, 50px;
     }
+
+    .slide--htmlacademy {
+      background-image: url('./pictures/htmlacademy-logo.svg');
+      background-repeat: no-repeat;
+      background-position: right 20px bottom 25px;
+      background-size: 30px;
+    }
   </style>
 </head>
 <body class="shower list">
@@ -46,61 +53,178 @@
     </style>
   </section>
 
+  <section class="slide slide--bsa" id="who">
+    <h2>Who I am</h2>
+    <p class="position">
+      <a href="https://binary-studio.com/" target="_blank" rel="noreferrer">BinaryStudio </a>
+      ❤️ JavaScript Developer
+    </p>
+
+    <style>
+      #who {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #who h2 {
+        margin: 30px 0 0;
+        font-size: 50px;
+      }
+
+      #who .position {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0 0 0 50px;
+      }
+
+      #who .position::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 80%;
+        content: '';
+        background-color: #000000;
+      }
+
+      #who .position::after {
+        position: absolute;
+        bottom: 30px;
+        left: -7.5px;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96.154px' height='96.154px' viewBox='0 0 96.154 96.154'%3E%3Cpath d='M0.561,20.971l45.951,57.605c0.76,0.951,2.367,0.951,3.127,0l45.956-57.609c0.547-0.689,0.709-1.716,0.414-2.61 c-0.061-0.187-0.129-0.33-0.186-0.437c-0.351-0.65-1.025-1.056-1.765-1.056H2.093c-0.736,0-1.414,0.405-1.762,1.056 c-0.059,0.109-0.127,0.253-0.184,0.426C-0.15,19.251,0.011,20.28,0.561,20.971z'/%3E%3C/svg%3E%0A");
+        background-size: cover;
+      }
+
+      #who .position a {
+        background-image: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--htmlacademy" id="htmlacademy">
+    <figure class="logo-wrapper">
+      <img src="pictures/htmlacademy-logo.svg" width="200" height="250" alt="Html academy logo">
+      <figcaption>
+        <a href="https://htmlacademy.ru/profile/whatislove" target="_blank" rel="noreferrer">HTMLAcademy</a>
+      </figcaption>
+    </figure>
+
+    <style>
+      #htmlacademy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #htmlacademy .logo-wrapper {
+        padding: 70px 0 0;
+      }
+
+      #htmlacademy figcaption {
+        text-align: center;
+      }
+    </style>
+  </section>
+
   <section class="slide slide--bsa" id="program">
     <h2>Today in the program</h2>
-    <ul>
+    <ul class="next">
       <li>
+        <b>P</b>rogressive <b>E</b>nhancement & <b>G</b>raceful  <b>D</b>egradation
+      </li>
+      <li class="next">
         <b>P</b>rogressive <b>W</b>eb <b>A</b>pplication
       </li>
-      <li>
+      <li class="next">
         <b>S</b>ervice <b>W</b>orker
       </li>
-      <li>
+      <li class="next">
         <code>webmanifest</code>
+      </li>
+      <li class="next">
+        <b>W</b>orkbox
       </li>
     </ul>
   </section>
 
-  <section class="slide slide--bsa" id="webmanifest">
-    <h2 class="webmanifest__title">webmanifest</h2>
-    <div class="webmanifest__codes">
-      <pre class="webmanifest__code next">
-        <code><span class="comment">// manifest.webmanifest</span></code>
-        <code>{ </code>
-        <code>  "name": "GitHub", </code>
-        <code>  "short_name": "GH", </code>
-        <code>  "description:" "Internet hosting for software development & version control.", </code>
-        <code>  "start_url": ".", </code>
-        <code>  "display": "standalone", </code>
-        <code>  "orientation": "any", </code>
-        <code>  "background_color": "#000000", </code>
-        <code>  "theme_color": "#000000", </code>
-        <code>  "icons": [ </code>
-        <code>    { "src": "/img/icons/icon-512.png", "type": "image/png", "sizes": "512x512" }, </code>
-        <code>    { "src": "/img/icons/icon-192.png", "type": "image/png", "sizes": "192x192" } </code>
-        <code>  ] </code>
-        <code>} </code>
-        <code> </code>
-        <div class="next">
-          <code><span class="comment">&lt;!-- index.html --&gt;</span></code>
-          <code>&lt;head&gt;</code>
-          <code>  &lt;link rel="manifest" href="/manifest.webmanifest"&gt;</code>
-          <code>  &lt;link rel="icon" href="/img/icons/icon.svg" type="image/svg+xml"&gt;</code>
-          <code>  &lt;link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png"&gt;</code>
-          <code>&lt;/head&gt;</code>
-        </div>
-      </pre>
-    </div>
+  <section class="slide slide--bsa" id="base">
+    <h2 class="base__title">🚡 Progressive Enhancement & <br>🪜 Graceful Degradation </h2>
+    <ul class="base__list">
+      <li class="base__item">
+        <h3>Progressive Enhancement</h3>
+        <pre class="base__code">
+          <code>.column {</code>
+          <code>  display: flex;</code>
+          <code> }</code>
+          <code> </code>
+          <code>@support (display: grid) {</code>
+          <code>  .main {</code>
+          <code>    display: grid;</code>
+          <code>  }</code>
+          <code>}</code>
+        </pre>
+      </li>
+      <li class="base__item">
+        <h3>Graceful Degradation</h3>
+        <pre class="base__code">
+          <code>.element {</code>
+          <code>  background-image: linear-gradient(#e66465, #9198e5);</code>
+          <code>  background-color: #bf7da3;</code>
+          <code> }</code>
+        </pre>
+      </li>
+    </ul>
 
     <style>
-      #webmanifest .webmanifest__title {
-        margin-bottom: 10px;
+      #base {
+        display: flex;
+        flex-direction: column;
       }
 
-      #webmanifest .webmanifest__codes {
+      #base .base__list {
         display: flex;
-        font-size: 9px;
-        margin: 0 30px 0 0;
+        justify-content: center;
+        gap: 150px;
+      }
+
+      #base .base__item {
+        font-size: 12.5px;
+      }
+
+      #base .base__item::before {
+        display: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="what-are-pwas">
+    <h2 class="what-are-pwas__title">What Are PWAs</h2>
+    <img class="what-are-pwas__img next" src="pictures/pwa.svg" width="330" height="330" alt="PWA">
+    <a class="what-are-pwas__link next" href="https://web.dev/what-are-pwas/" target="_blank" rel="noreferrer">
+      web.dev/what-are-pwas
+    </a>
+
+    <style>
+      #what-are-pwas {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #what-are-pwas .what-are-pwas__img {
+        align-self: center;
+      }
+
+      #what-are-pwas .what-are-pwas__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
       }
     </style>
   </section>
@@ -153,9 +277,110 @@
         align-self: center;
         margin: 50px 0 0;
         font-size: 60px;
-
       }
     </style>
+  </section>
+
+  <section class="slide slide--bsa" id="apps-with-pwas">
+    <h2>Apps with PWA</h2>
+    <div class="apps-with-pwas__img-wrapper next">
+      <img class="apps-with-pwas__img" src="pictures/apps-with-pwas.png" width="700" height="320" alt="Apps with PWAs">
+      <ul class="apps-with-pwas__statistic-list">
+        <li class="apps-with-pwas__statistic-item apps-with-pwas__statistic-item--desktop">
+          Desktop
+          <b>1.2%</b>
+        </li>
+        <li class="apps-with-pwas__statistic-item apps-with-pwas__statistic-item--mobile">
+          Mobile
+          <b>1.1%</b>
+        </li>
+      </ul>
+    </div>
+    <a class="apps-with-pwas__link next" href="https://httparchive.org/reports/progressive-web-apps?start=2016_01_01&end=latest&view=list" target="_blank" rel="noreferrer">
+      httparchive
+    </a>
+
+    <style>
+      #apps-with-pwas {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #apps-with-pwas .apps-with-pwas__img-wrapper {
+        display: flex;
+        gap: 50px;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-list {
+        display: grid;
+        grid-column: column;
+        align-self: flex-start;
+        gap: 20px;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item::before {
+        display: none;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item--desktop b {
+        color: #04c7fd;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item--mobile b {
+        color: #a62aa4;
+      }
+
+      #apps-with-pwas .apps-with-pwas__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="global-apps-with-pwas">
+    <h2>Apps with PWA</h2>
+    <img class="global-apps-with-pwas__img next" src="pictures/global-apps-with-pwas.png" width="640" height="320" alt="Apps with PWAs">
+    <a class="global-apps-with-pwas__link next" href="https://chromestatus.com/metrics/feature/timeline/popularity/990" target="_blank" rel="noreferrer">
+      chromestatus
+    </a>
+
+    <style>
+      #global-apps-with-pwas {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #global-apps-with-pwas .global-apps-with-pwas__img {
+        align-self: center;
+      }
+
+      #global-apps-with-pwas .global-apps-with-pwas__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="why">
+    <h2>Why</h2>
+    <ul class="next">
+      <li>Always available app</li>
+      <li class="next">Data is smartly stored</li>
+      <li class="next">Online actions don't disappear</li>
+      <li class="next">Network errors — don't interrupt the task</li>
+      <li class="next">Explicit and background updates</li>
+      <li class="next">The platform's features are used to the fullest</li>
+      <li class="next"><b>Retain the benefits of the web</b></li>
+    </ul>
   </section>
 
   <section class="slide slide--bsa" id="pwa-includes">
@@ -211,6 +436,50 @@
         width: 50px;
         height: 50px;
         border-color: #02CC00;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="webmanifest">
+    <h2 class="webmanifest__title">webmanifest</h2>
+    <div class="webmanifest__codes">
+      <pre class="webmanifest__code next">
+        <code><span class="comment">// manifest.webmanifest</span></code>
+        <code>{ </code>
+        <code>  "name": "GitHub", </code>
+        <code>  "short_name": "GH", </code>
+        <code>  "description:" "Internet hosting for software development & version control.", </code>
+        <code>  "start_url": ".", </code>
+        <code>  "display": "standalone", </code>
+        <code>  "orientation": "any", </code>
+        <code>  "background_color": "#000000", </code>
+        <code>  "theme_color": "#000000", </code>
+        <code>  "icons": [ </code>
+        <code>    { "src": "/img/icons/icon-512.png", "type": "image/png", "sizes": "512x512" }, </code>
+        <code>    { "src": "/img/icons/icon-192.png", "type": "image/png", "sizes": "192x192" } </code>
+        <code>  ] </code>
+        <code>} </code>
+        <code> </code>
+        <div class="next">
+          <code><span class="comment">&lt;!-- index.html --&gt;</span></code>
+          <code>&lt;head&gt;</code>
+          <code>  &lt;link rel="manifest" href="/manifest.webmanifest"&gt;</code>
+          <code>  &lt;link rel="icon" href="/img/icons/icon.svg" type="image/svg+xml"&gt;</code>
+          <code>  &lt;link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png"&gt;</code>
+          <code>&lt;/head&gt;</code>
+        </div>
+      </pre>
+    </div>
+
+    <style>
+      #webmanifest .webmanifest__title {
+        margin-bottom: 10px;
+      }
+
+      #webmanifest .webmanifest__codes {
+        display: flex;
+        font-size: 9px;
+        margin: 0 30px 0 0;
       }
     </style>
   </section>
@@ -372,6 +641,286 @@
 
       #sw-example .sw-example__code {
         font-size: 10px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="strategies">
+    <h2>Strategies</h2>
+    <ul class="strategies__list next">
+      <li class="strategies__item">
+        <img class="strategies__item-img" src="pictures/strategy-cache-first.png" width="250" height="105" alt="Cache First">
+        <h3 class="strategies__item-title">Cache First</h3>
+      </li>
+      <li class="strategies__item next">
+        <img class="strategies__item-img" src="pictures/strategy-network-first.png" width="250" height="105" alt="Cache First">
+        <h3 class="strategies__item-title">Network First</h3>
+      </li>
+      <li class="strategies__item next">
+        <img class="strategies__item-img" src="pictures/strategy-network-only.png" width="250" height="105" alt="Cache First">
+        <h3 class="strategies__item-title">Network Only</h3>
+      </li>
+      <li class="strategies__item next">
+        <img class="strategies__item-img" src="pictures/strategy-cache-only.png" width="250" height="105" alt="Cache First">
+        <h3 class="strategies__item-title">Cache Only</h3>
+      </li>
+    </ul>
+
+    <style>
+      #strategies .strategies__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        justify-items: center;
+        align-items: center;
+      }
+
+      #strategies .strategies__item::before {
+        display: none;
+      }
+
+      #strategies .strategies__item-title {
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="joke">
+    <h2>Joke from 2019</h2>
+    <ul class="next">
+      <li>*buy a domain*</li>
+      <li class="next">*deploy a bad service worker to production*</li>
+      <li class="next">*buy a new domain*</li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bsa" id="pwa-app">
+    <h2 class="pwa-app__title">If everything is fine 🤞</h2>
+    <ul class="pwa-app__list next">
+      <li class="pwa-app__item">
+        <img src="pictures/bs-pwa-desktop.png" width="300" alt="BS pwa desktop">
+      </li>
+      <li class="pwa-app__item">
+        <img src="pictures/bs-pwa-mobile.jpg" width="150" alt="BS pwa mobile">
+      </li>
+    </ul>
+    <a class="pwa-app__link next" href="chrome://apps/" target="_blank" rel="noreferrer">
+      chrome://apps/
+    </a>
+
+    <style>
+      #pwa-app {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #pwa-app .pwa-app__title {
+        margin-bottom: 10px;
+      }
+
+      #pwa-app .pwa-app__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+      }
+
+      #pwa-app .pwa-app__item::before {
+        display: none;
+      }
+
+      #pwa-app .pwa-app__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="markets">
+    <h2 class="markets__title">What about markets?</h2>
+    <p class="markets__desc next">
+      <u>Yes you can</u>
+    </p>
+    <b class="markets__post-desc next">but be careful</b>
+
+    <style>
+      #markets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #markets.markets__title {
+        align-self: center;
+      }
+
+      #markets .markets__desc {
+        align-self: center;
+        margin: 50px 0 0;
+        font-size: 60px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="different-apps-quiz">
+    <h2 class="different-apps-quiz__title">Quiz</h2>
+    <p class="different-apps-quiz__description next">PWA or Mobile?</p>
+    <ul class="different-apps-quiz__list next">
+      <li class="different-apps-quiz__item">
+        <img src="pictures/mobile-app.png" width="150" alt="Mobile app">
+      </li>
+      <li class="different-apps-quiz__item">
+        <img src="pictures/pwa-app.png" width="150" alt="PWA app">
+      </li>
+    </ul>
+
+    <style>
+      #different-apps-quiz .different-apps-quiz__list {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+      }
+
+      #different-apps-quiz .different-apps-quiz__item::before {
+        display: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="pwa-media">
+    <h2>Add Some Web magic 🪄</h2>
+    <pre class="pwa-media__code next">
+      <code><span class="comment">/* pwa.css */</span></code>
+      <code>@media (display-mode: standalone) {}</code>
+    </pre>
+    <a class="pwa-media__link next" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/display-mode" target="_blank" rel="noreferrer">
+      display-mode media
+    </a>
+
+    <style>
+      #pwa-media {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #pwa-media .pwa-media__code {
+        margin: 80px 0 0;
+      }
+
+      #pwa-media .pwa-media__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="same-apps-quiz">
+    <h2 class="same-apps-quiz__title">Quiz 😤</h2>
+    <p class="same-apps-quiz__description next">PWA or Mobile?</p>
+    <ul class="same-apps-quiz__list next">
+      <li class="same-apps-quiz__item">
+        <img src="pictures/mobile-app.png" width="150" alt="Mobile app">
+      </li>
+      <li class="same-apps-quiz__item">
+        <img src="pictures/mobile-app.png" width="150" alt="PWA app">
+      </li>
+    </ul>
+
+    <style>
+      #same-apps-quiz .same-apps-quiz__list {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+      }
+
+      #same-apps-quiz .same-apps-quiz__item::before {
+        display: none;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="as-in-book">
+    <h2>As in Book...</h2>
+    <ul class="next">
+      <li>Build routine</li>
+      <li class="next">Settings</li>
+      <li class="next">Extensibility</li>
+      <li class="next">Smart cache</li>
+      <li class="next">Debug</li>
+      <li class="next">Connection with the app</li>
+      <li class="next">...</li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bsa" id="workbox">
+    <img class="workbox__logo" src="pictures/workbox-logo.svg" width="500" height="95" alt="Workbox">
+    <ul class="workbox__list">
+      <li class="workbox__item">Abstraction</li>
+      <li class="workbox__item">Declarative (where need)</li>
+      <li class="workbox__item">Modularity & Expansion</li>
+      <li class="workbox__item">Know a lot out of the Box</li>
+      <li class="workbox__item">Open-source</li>
+      <li class="workbox__item">Active Development & Support</li>
+    </ul>
+    <a class="workbox__link" href="https://developers.google.com/web/tools/workbox" target="_blank" rel="noreferrer">
+      Workbox
+    </a>
+
+    <style>
+      #workbox {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #workbox .workbox__logo {
+        align-self: center;
+      }
+
+      #workbox .workbox__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
+      }
+
+      #workbox .workbox__list {
+        margin: 30px 0 0;
+      }
+
+      #workbox .workbox__item {
+        font-size: 22px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="workbox-features">
+    <h2 class="workbox-features__title">Workbox</h2>
+    <ul class="workbox-features__list next">
+      <li class="workbox-features__item">
+        One Line of the Code
+        <pre class="workbox-features__code">
+          <code>import { precacheAndRoute } from 'workbox-precaching';</code>
+          <code> </code>
+          <code>precacheAndRoute(ASSETS_URLS);</code>
+        </pre>
+      </li>
+      <li class="workbox-features__item next">
+        Custom Strategy
+        <pre class="workbox-features__code">
+          <code>import { Strategy } from 'workbox-strategies';</code>
+          <code> </code>
+          <code>class CustomStrategy extends Strategy {}</code>
+        </pre>
+      </li>
+    </ul>
+
+    <style>
+
+      #workbox-features .workbox-features__code {
+        font-size: 15px;
       }
     </style>
   </section>
