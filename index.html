@@ -380,19 +380,19 @@
     <h2>Strategies</h2>
     <ul class="strategies__list next">
       <li class="strategies__item">
-        <img class="strategies__item-img" src="pictures/strategy-cache-first.png" width="250" alt="Cache First">
+        <img class="strategies__item-img" src="pictures/strategy-cache-first.png" width="250" height="105" alt="Cache First">
         <h3 class="strategies__item-title">Cache First</h3>
       </li>
       <li class="strategies__item next">
-        <img class="strategies__item-img" src="pictures/strategy-network-first.png" width="250" alt="Cache First">
+        <img class="strategies__item-img" src="pictures/strategy-network-first.png" width="250" height="105" alt="Cache First">
         <h3 class="strategies__item-title">Network First</h3>
       </li>
       <li class="strategies__item next">
-        <img class="strategies__item-img" src="pictures/strategy-network-only.png" width="250" alt="Cache First">
+        <img class="strategies__item-img" src="pictures/strategy-network-only.png" width="250" height="105" alt="Cache First">
         <h3 class="strategies__item-title">Network Only</h3>
       </li>
       <li class="strategies__item next">
-        <img class="strategies__item-img" src="pictures/strategy-cache-only.png" width="250" alt="Cache First">
+        <img class="strategies__item-img" src="pictures/strategy-cache-only.png" width="250" height="105" alt="Cache First">
         <h3 class="strategies__item-title">Cache Only</h3>
       </li>
     </ul>
@@ -414,6 +414,50 @@
         margin: 0;
         text-align: center;
         font-size: 16px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="pwa-app">
+    <h2 class="pwa-app__title">If everything is fine 🤞</h2>
+    <ul class="pwa-app__list next">
+      <li class="pwa-app__item">
+        <img src="pictures/bs-pwa-desktop.png" width="300" alt="BS pwa desktop">
+      </li>
+      <li class="pwa-app__item">
+        <img src="pictures/bs-pwa-mobile.jpg" width="150" alt="BS pwa mobile">
+      </li>
+    </ul>
+    <a class="pwa-app__link next" href="chrome://apps/" target="_blank" rel="noreferrer">
+      chrome://apps/
+    </a>
+
+    <style>
+      #pwa-app {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #pwa-app .pwa-app__title {
+        margin-bottom: 10px;
+      }
+
+      #pwa-app .pwa-app__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+      }
+
+      #pwa-app .pwa-app__item::before {
+        display: none;
+      }
+
+      #pwa-app .pwa-app__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
       }
     </style>
   </section>
