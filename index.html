@@ -135,20 +135,73 @@
 
   <section class="slide slide--bsa" id="program">
     <h2>Today in the program</h2>
-    <ul>
+    <ul class="next">
       <li>
+        <b>P</b>rogressive <b>E</b>nhancement & <b>G</b>raceful  <b>D</b>egradation
+      </li>
+      <li class="next">
         <b>P</b>rogressive <b>W</b>eb <b>A</b>pplication
       </li>
-      <li>
+      <li class="next">
         <b>S</b>ervice <b>W</b>orker
       </li>
-      <li>
+      <li class="next">
         <code>webmanifest</code>
       </li>
-      <li>
-        Workbox
+      <li class="next">
+        <b>W</b>orkbox
       </li>
     </ul>
+  </section>
+
+  <section class="slide slide--bsa" id="base">
+    <h2 class="base__title">🚡 Progressive Enhancement & <br>🪜 Graceful Degradation </h2>
+    <ul class="base__list">
+      <li class="base__item">
+        <h3>Progressive Enhancement</h3>
+        <pre class="base__code">
+          <code>.column {</code>
+          <code>  display: flex;</code>
+          <code> }</code>
+          <code> </code>
+          <code>@support (display: grid) {</code>
+          <code>  .main {</code>
+          <code>    display: grid;</code>
+          <code>  }</code>
+          <code>}</code>
+        </pre>
+      </li>
+      <li class="base__item">
+        <h3>Graceful Degradation</h3>
+        <pre class="base__code">
+          <code>.element {</code>
+          <code>  background-image: linear-gradient(#e66465, #9198e5);</code>
+          <code>  background-color: #bf7da3;</code>
+          <code> }</code>
+        </pre>
+      </li>
+    </ul>
+
+    <style>
+      #base {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #base .base__list {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+      }
+
+      #base .base__item {
+        font-size: 12.5px;
+      }
+
+      #base .base__item::before {
+        display: none;
+      }
+    </style>
   </section>
 
   <section class="slide slide--bsa" id="what-are-pwas">
