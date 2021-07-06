@@ -376,6 +376,48 @@
     </style>
   </section>
 
+  <section class="slide slide--bsa" id="strategies">
+    <h2>Strategies</h2>
+    <ul class="strategies__list next">
+      <li class="strategies__item">
+        <img class="strategies__item-img" src="pictures/strategy-cache-first.png" width="250" alt="Cache First">
+        <h3 class="strategies__item-title">Cache First</h3>
+      </li>
+      <li class="strategies__item next">
+        <img class="strategies__item-img" src="pictures/strategy-network-first.png" width="250" alt="Cache First">
+        <h3 class="strategies__item-title">Network First</h3>
+      </li>
+      <li class="strategies__item next">
+        <img class="strategies__item-img" src="pictures/strategy-network-only.png" width="250" alt="Cache First">
+        <h3 class="strategies__item-title">Network Only</h3>
+      </li>
+      <li class="strategies__item next">
+        <img class="strategies__item-img" src="pictures/strategy-cache-only.png" width="250" alt="Cache First">
+        <h3 class="strategies__item-title">Cache Only</h3>
+      </li>
+    </ul>
+
+    <style>
+      #strategies .strategies__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        justify-items: center;
+        align-items: center;
+      }
+
+      #strategies .strategies__item::before {
+        display: none;
+      }
+
+      #strategies .strategies__item-title {
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
+      }
+    </style>
+  </section>
+
   <section class="slide slide--bsa" id="joke">
     <h2>Joke from 2019</h2>
     <ul class="next">
