@@ -224,7 +224,70 @@
         align-self: center;
         margin: 50px 0 0;
         font-size: 60px;
+      }
+    </style>
+  </section>
 
+  <section class="slide slide--bsa" id="apps-with-pwas">
+    <h2>Apps with PWA</h2>
+    <div class="apps-with-pwas__img-wrapper next">
+      <img class="apps-with-pwas__img" src="pictures/apps-with-pwas.png" width="700" height="320" alt="Apps with PWAs">
+      <ul class="apps-with-pwas__statistic-list">
+        <li class="apps-with-pwas__statistic-item apps-with-pwas__statistic-item--desktop">
+          Desktop
+          <b>1.2%</b>
+        </li>
+        <li class="apps-with-pwas__statistic-item apps-with-pwas__statistic-item--mobile">
+          Mobile
+          <b>1.1%</b>
+        </li>
+      </ul>
+    </div>
+    <a class="apps-with-pwas__link next" href="https://httparchive.org/reports/progressive-web-apps?start=2016_01_01&end=latest&view=list" target="_blank" rel="noreferrer">
+      httparchive
+    </a>
+
+    <style>
+      #apps-with-pwas {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #apps-with-pwas .apps-with-pwas__img-wrapper {
+        display: flex;
+        gap: 50px;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-list {
+        display: grid;
+        grid-column: column;
+        align-self: flex-start;
+        gap: 20px;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item::before {
+        display: none;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item--desktop b {
+        color: #04c7fd;
+      }
+
+      #apps-with-pwas .apps-with-pwas__statistic-item--mobile b {
+        color: #a62aa4;
+      }
+
+      #apps-with-pwas .apps-with-pwas__link {
+        align-self: center;
+        margin: auto 0 30px;
+        font-size: 12px;
       }
     </style>
   </section>
