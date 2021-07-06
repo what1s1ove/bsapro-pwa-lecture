@@ -1,204 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
-    </style>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+
+    .slide--bsa {
+      background-image: url('./pictures/binary-studio-logo.svg'), url('./pictures/binary-studio-academy-logo.svg');
+      background-repeat: no-repeat;
+      background-position: right 20px bottom 25px, left 20px bottom 15px;
+      background-size: 75px, 50px;
+    }
+  </style>
 </head>
 <body class="shower list">
 
-    <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
-    </header>
+  <header class="caption">
+    <h1>PWA</h1>
+    <p><b>P</b>rogressive <b>W</b>eb <b>A</b>pplication</p>
+  </header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="https://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #cover h2 {
-                margin: 30px 0 0;
-                color: white;
-                text-align: center;
-                font-size: 70px;
-            }
+  <section class="slide" id="cover">
+    <img class="cover__logo" src="pictures/pwa-logo.svg" width="400" alt="PWA">
+    <h2 class="cover__title">Progressive Web Application</h2>
+    <p class="copyright right">
+      <a href="https://whatislove.dev/" target="_blank" rel="noreferrer">© Vladyslav Zubko</a>
+    </p>
 
-            #cover p {
-                margin: 10px 0 0;
-                text-align: center;
-                color: white;
-                font-style: italic;
-                font-size: 20px;
-            }
+    <style>
+      #cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-            #cover p a {
-                color: white;
-            }
-        </style>
-    </section>
+      #cover .cover__title {
+        font-weight: 400;
+      }
+    </style>
+  </section>
 
-    <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
+  <section class="slide slide--bsa" id="program">
+    <h2>Today in the program</h2>
+    <ul>
+      <li>
+        <b>P</b>rogressive <b>W</b>eb <b>A</b>pplication
+      </li>
+      <li>
+        <b>S</b>ervice <b>W</b>orker
+      </li>
+      <li>
+        <code>webmanifest</code>
+      </li>
+    </ul>
+  </section>
 
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+  <section class="slide slide--bsa" id="webmanifest">
+    <h2 class="webmanifest__title">webmanifest</h2>
+    <div class="webmanifest__codes">
+      <pre class="webmanifest__code next">
+        <code><span class="comment">// manifest.webmanifest</span></code>
+        <code>{ </code>
+        <code>  "name": "GitHub", </code>
+        <code>  "short_name": "GH", </code>
+        <code>  "description:" "Internet hosting for software development & version control.", </code>
+        <code>  "start_url": ".", </code>
+        <code>  "display": "standalone", </code>
+        <code>  "orientation": "any", </code>
+        <code>  "background_color": "#000000", </code>
+        <code>  "theme_color": "#000000", </code>
+        <code>  "icons": [ </code>
+        <code>    { "src": "/img/icons/icon-512.png", "type": "image/png", "sizes": "512x512" }, </code>
+        <code>    { "src": "/img/icons/icon-192.png", "type": "image/png", "sizes": "192x192" } </code>
+        <code>  ] </code>
+        <code>} </code>
+        <code> </code>
+        <div class="next">
+          <code><span class="comment">&lt;!-- index.html --&gt;</span></code>
+          <code>&lt;head&gt;</code>
+          <code>  &lt;link rel="manifest" href="/manifest.webmanifest"&gt;</code>
+          <code>  &lt;link rel="icon" href="/img/icons/icon.svg" type="image/svg+xml"&gt;</code>
+          <code>  &lt;link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png"&gt;</code>
+          <code>&lt;/head&gt;</code>
         </div>
-    </section>
+      </pre>
+    </div>
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
-    </section>
+    <style>
+      #webmanifest .webmanifest__title {
+        margin-bottom: 10px;
+      }
 
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
+      #webmanifest .webmanifest__codes {
+        display: flex;
+        font-size: 9px;
+        margin: 0 30px 0 0;
+      }
+    </style>
+  </section>
 
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
+  <section class="slide slide--bsa" id="roller-coaster">
+    <h2>PWA Roller Coaster 🎢</h2>
+    <ul class="next">
+      <li>
+        😾
+        <a href="https://www.thurrott.com/cloud/web-browsers/mozilla-firefox/246716/firefox-85-is-here-but-mozilla-is-killing-pwa-features" target="_blank" rel="noreferrer">
+          Firefox 85 is Here, But Mozilla is Killing PWA Features
+        </a>
+      </li>
+      <li class="next">
+        😺
+        <a href="https://chromeos.dev/en/posts/easy-to-build-monetize-and-discover-list-your-web-app-on-google-play" target="_blank" rel="noreferrer">
+          Easy to build, monetize, and discover: List your web app on Google Play
+        </a>
+      </li>
+      <li class="next">
+        😾
+        <a href="https://www.infoq.com/news/2020/07/apple-fingerprinting-privacy/" target="_blank" rel="noreferrer">
+          Apple Rejects NFC, BT and 14 More Web APIs, Citing Privacy Reasons
+        </a>
+      </li>
+      <li class="next">
+        😺
+        <a href="https://medium.com/pwabuilder/bringing-chromium-edge-pwas-progressive-web-apps-to-the-microsoft-store-c0bd07914ed9" target="_blank" rel="noreferrer">
+          Bringing Chromium Edge PWAs to the Microsoft Store
+        </a>
+      </li>
+    </ul>
+  </section>
 
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
+  <section class="slide slide--bsa" id="who-listen">
+    <h2 class="who-listen__title">Who to listen to?</h2>
+    <p class="who-listen__desc next">🪄 Web-Standards 🦄</p>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
-    </section>
+    <style>
+      #who-listen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #who-listen .who-listen__title {
+        align-self: center;
+      }
 
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
+      #who-listen .who-listen__desc {
+        align-self: center;
+        margin: 50px 0 0;
+        font-size: 60px;
 
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
+      }
+    </style>
+  </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
+  <section class="slide slide--bsa" id="pwa-includes">
+    <h2 class="pwa-includes__title">PWA</h2>
+    <div class="pwa-includes__wrapper next">
+      PWA
+      <div class="pwa-includes__include pwa-includes__include--pwa next">
+        Service Worker
+        <div class="pwa-includes__include pwa-includes__include--sw next">
+          Network
+          <div class="pwa-includes__include pwa-includes__include--network next">
+            Cache
+            <div class="pwa-includes__include pwa-includes__include--cache next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
+    <style>
+      #pwa-includes .pwa-includes__title {
+        margin-bottom: 10px;
+      }
+      #pwa-includes .pwa-includes__wrapper,
+      #pwa-includes .pwa-includes__include {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #pwa-includes .pwa-includes__include {
+        border: 10px solid #000000;
+      }
+
+      #pwa-includes .pwa-includes__include--pwa {
+        width: 320px;
+        height: 320px;
+        border-color: #FF0202;
+      }
+
+      #pwa-includes .pwa-includes__include--sw {
+        width: 230px;
+        height: 230px;
+        border-color: #FFA500;
+      }
+
+      #pwa-includes .pwa-includes__include--network {
+        width: 140px;
+        height: 140px;
+        border-color: #FDFF00;
+      }
+
+      #pwa-includes .pwa-includes__include--cache {
+        width: 50px;
+        height: 50px;
+        border-color: #02CC00;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="sw">
+    <h2>Service Worker</h2>
+    <ul class="sw__list">
+      <li class="sw__item sw__item--page">
+        <span class="sw__icon">⚛️</span>
+        Browser Page
+      </li>
+      <li class="sw__item sw__item--sw next">
+        <span class="sw__item-wrapper sw__item-wrapper--sw">
+          <span class="sw__icon">↔️ 🧑‍🔧 ↔️</span>
+            SW
+        </span>
+        <span class="sw__item-wrapper sw__item-wrapper--way">
+          <span class="sw__icon">↔️</span>
+        </span>
+      </li>
+      <li class="sw__item sw__item--internet">
+        <span class="sw__icon">🌐</span>
+        Internet
+      </li>
+    </ul>
+
+    <style>
+      #sw .sw__list {
+        display: flex;
+        margin: 80px 0 0;
+      }
+
+      #sw .sw__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #sw .sw__item::before {
+        display: none;
+      }
+
+      #sw .sw__item.next {
+        visibility: visible;
+      }
+
+      #sw .sw__item .sw__item-wrapper--sw {
+        display: none;
+      }
+
+      #sw .sw__item.next.active .sw__item-wrapper--sw,
+      #sw .sw__item.next.visited .sw__item-wrapper--sw {
+        display: flex;
+      }
+
+      #sw .sw__item.next.active .sw__item-wrapper--way,
+      #sw .sw__item.next.visited .sw__item-wrapper--way {
+        display: none;
+      }
+
+      #sw .sw__item-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #sw .sw__item--sw {
+        flex-grow: 1;
+      }
+
+      #sw .sw__item--sw .sw__icon {
+        letter-spacing: 35px;
+      }
+
+      #sw .sw__icon {
+        font-size: 70px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="sw-facts">
+    <h2>Service Worker</h2>
+    <ul class="next">
+      <li>HTTPS only</li>
+      <li class="next">New thread only (background mode)</li>
+      <li class="next">No DOM</li>
+      <li class="next">No sync API (XHR, LocalStorage, etc.)</li>
+      <li class="next">Requests interception (caching, mutation requests)</li>
+      <li class="next"><s>this</s> self</li>
+    </ul>
+  </section>
+
+  <section class="slide slide--bsa" id="sw-lifecycle">
+    <h2 class="sw-lifecycle__title">Service Worker Life Cycle</h2>
+    <pre class="sw-lifecycle__code next">
+      <code><span class="comment">// sw.js</span></code>
+      <div class="next">
+        <code>self.addEventListener('install', () => {</code>
+          <code>  <span class="comment">// add source to cache</span></code>
+          <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('activate', () => {</code>
+        <code>  <span class="comment">// version control</span></code>
+        <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('fetch', () => {</code>
+        <code>  <span class="comment">// requests interception (response with resources from cache)</span></code>
+        <code>});</code>
+      </div>
+    </pre>
+
+    <style>
+      #sw-lifecycle .sw-lifecycle__code {
+        font-size: 14px;
+      }
+    </style>
+  </section>
+
+  <section  class="slide slide--bsa" id="sw-example">
+    <h2 class="sw-example__title">Service Worker Example</h2>
+    <pre class="sw-example__code next">
+      <code><span class="comment">// sw.js</span></code>
+      <div class="next">
+        <code>const APP_CACHE_NAME = 'app-cache-v1';</code>
+        <code>const ASSETS_URLS = ['index.html', '/js/app.js', '/css/main.css'];</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('install', async () => {</code>
+        <code>  const cache = await caches.open(APP_CACHE_NAME);</code>
+        <code>  await cache.addAll(ASSETS_URLS);</code>
+        <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('fetch', async (evt) => {</code>
+        <code>  const cached = await caches.match(evt.request);</code>
+        <code>  evt.respondWith(cached ?? await fetch(evt.request));</code>
+        <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code><span class="comment">// js/main.js</span></code>
+        <code>window.addEventListener('load', () => { </code>
+        <code>  navigator.serviceWorker?.register('../sw.js'); </code>
+        <code>});</code>
+      </div>
+    </pre>
+
+    <style>
+      #sw-example .sw-example__title {
+        margin-bottom: 10px;
+      }
+
+      #sw-example .sw-example__code {
+        font-size: 10px;
+      }
+    </style>
+  </section>
+
+  <section class="slide slide--bsa" id="thanks">
+    <h2>Thanks 🍉</h2>
+
+    <style>
+      #thanks {
+        display: grid;
+        place-content: center;
+      }
+    </style>
+  </section>
 
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
     </footer>
 
     <div class="progress"></div>
