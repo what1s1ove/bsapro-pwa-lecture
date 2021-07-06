@@ -304,6 +304,40 @@
     </ul>
   </section>
 
+  <section class="slide slide--bsa" id="sw-lifecycle">
+    <h2>Service Worker Life Cycle</h2>
+    <pre class="sw-lifecycle__code next">
+      <code><span class="comment">// sw.js</span></code>
+      <div class="next">
+        <code>self.addEventListener('install', () => {</code>
+          <code>  <span class="comment">// add source to cache</span></code>
+          <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('activate', () => {</code>
+        <code>  <span class="comment">// version control</span></code>
+        <code>});</code>
+      </div>
+      <div class="next">
+        <code> </code>
+        <code>self.addEventListener('fetch', () => {</code>
+        <code>  <span class="comment">// requests interception (response with resources from cache)</span></code>
+        <code>});</code>
+      </div>
+    </pre>
+
+    <style>
+      #sw-lifecycle .sw-lifecycle__code {
+        font-size: 14px;
+      }
+    </style>
+  </section>
+
+  <section  class="slide slide--bsa" id="sw-example">
+    <h2>Service Worker Example</h2>
+  </section>
+
   <section class="slide slide--bsa" id="thanks">
     <h2>Thanks 🍉</h2>
 
